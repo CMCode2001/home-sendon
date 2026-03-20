@@ -18,8 +18,8 @@ export default function Problem() {
   ]
 
   return (
-    <section id="problem" ref={ref} className="section bg-slate-50">
-      <div className="container-xl">
+    <section id="problem" ref={ref} className="bg-slate-50 relative pb-16 sm:pb-24" style={{ paddingTop: '150px' }}>
+      <div className="container-xl relative z-10">
         {/* Header */}
         <motion.div className="section-header" initial="hidden" animate={inView ? 'show' : 'hidden'} variants={{ show: { transition: { staggerChildren: 0.1 } } }}>
           <motion.div variants={f}>

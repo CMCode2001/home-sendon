@@ -68,32 +68,6 @@ export default function Awards() {
             </motion.div>
           ))}
         </motion.div>
-<br />
-        {/* CTA block */}
-        <motion.div
-          initial={{ opacity:0, scale:0.97 }} animate={inView?{ opacity:1, scale:1 }:{}} transition={{ duration:0.8, delay:0.7 }}
-          className="mt-20 rounded-3xl bg-slate-900 p-1 md:p-16 text-center relative overflow-hidden"
-        >
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-red-600/20 blur-[100px]"/>
-          </div>
-          <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight tracking-tight max-w-2xl mx-auto">
-              {lang==='fr'?'Prêt à transformer le don de sang ?':'Ready to transform blood donation?'}
-            </h3>
-            <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-              {lang==='fr'?'Rejoignez SenDon et contribuez à sauver plus de vies grâce à l\'intelligence artificielle.':'Join SenDon and help save more lives with artificial intelligence.'}
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <a href="#" className="btn btn-primary">
-                {lang==='fr'?'Devenir Partenaire':'Become a Partner'} <ArrowRight size={18}/>
-              </a>
-              <a href="#" className="btn" style={{ background:'rgba(255,255,255,0.08)', color:'white', border:'1.5px solid rgba(255,255,255,0.15)' }}>
-                {lang==='fr'?'Nous contacter':'Contact us'}
-              </a>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

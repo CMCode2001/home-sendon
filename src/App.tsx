@@ -14,7 +14,7 @@ export default function App() {
     <LanguageProvider>
       <div className="min-h-screen">
         <Navbar />
-        <main className='pt-30'>
+        <main>
           {/* <Hero /> */}
           <Problem />
           <Solution />
