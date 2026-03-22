@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Globe } from 'lucide-react'
+import { Menu, X, Globe, Languages } from 'lucide-react'
 import { useLang } from '../contexts/LanguageContext'
 import logo from '../assets/logo/LogoSenDon.png'
 
@@ -45,12 +45,7 @@ export default function Navbar() {
     return () => window.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  // Fermeture automatique au scroll
-  useEffect(() => {
-    if (menuOpen && scrolled) {
-      setMenuOpen(false)
-    }
-  }, [scrolled, menuOpen])
+  // Removed problematic automatic close on scroll to prevent the menu from instantly closing when reopened.
 
   // Gestion de la touche Escape
   useEffect(() => {
@@ -156,7 +151,7 @@ export default function Navbar() {
                 loading="eager"
               />
             </div>
-            <span className="font-semibold text-slate-900 text-[1.05rem] whitespace-nowrap"> {/* whitespace-nowrap ajouté */}
+            <span className="font-extrabold tracking-tight text-slate-900 text-[1.1rem] whitespace-nowrap">
               Sen<span className="text-red-600">Don</span>
             </span>
           </a>
@@ -167,7 +162,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="relative text-slate-500 hover:text-slate-900 text-[0.85rem] font-semibold px-4 py-2 rounded-full transition group focus:outline-none focus-visible:ring-2 whitespace-nowrap" // whitespace-nowrap ajouté
+                className="relative  hover:text-slate-900 text-[0.85rem] font-semibold px-4 py-2 rounded-full transition group focus:outline-none focus-visible:ring-2 whitespace-nowrap" // whitespace-nowrap ajouté
                 onClick={(e: React.MouseEvent) => {
                   e.preventDefault()
                   document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' })
@@ -185,13 +180,13 @@ export default function Navbar() {
             <div ref={langRef} className="relative">
               <button
                 onClick={() => setLangOpen(prev => !prev)}
-                className="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/60 backdrop-blur-md border border-white/20 hover:bg-white/80 transition-all shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 active:scale-95"
+                className="flex items-center gap-2.5 bg-transparent px-5 py-2 focus-visible:ring-2 focus-visible:ring-red-500 active:scale-95 "
                 aria-label="Changer de langue"
                 aria-expanded={langOpen}
                 aria-haspopup="true"
               >
-                <Globe size={18} className="text-slate-700" />
-                <span className="text-xs font-bold text-slate-700 hidden sm:block">
+                <Languages size={18} className="" />
+                <span className="text-xs text-red-600 font-bold hidden sm:block">
                   {lang === 'fr' ? 'FR' : 'EN'}
                 </span>
               </button>
@@ -203,13 +198,15 @@ export default function Navbar() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="absolute right-0 mt-3 w-40 rounded-2xl 
-                             bg-white/90 backdrop-blur-xl
+                    className="absolute right-0 mt-3 w-40 
+                             bg-white/90 
+                             rounded-2xl backdrop-blur-xl
                              border border-slate-200/50 
                              shadow-[0_20px_50px_rgba(0,0,0,0.1)] 
-                             p-1.5 overflow-hidden z-[60]"
+                             p-3.5 overflow-hidden z-[60]"
                     role="menu"
                     aria-label="Sélection de la langue"
+                    style={{padding:10}}
                   >
                     <div className="flex flex-col gap-1">
                       {[
@@ -245,10 +242,11 @@ export default function Navbar() {
 
             {/* MOBILE MENU BUTTON */}
             <button
-              className="md:hidden p-2 rounded-full bg-white/70 backdrop-blur hover:bg-white transition focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
+              className="md:hidden p-2 focus-visible:ring-2 focus-visible:ring-red-500"
               onClick={() => setMenuOpen(prev => !prev)}
               aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={menuOpen}
+              style={{color:"black", backgroundColor:"transparent!important"}}
             >
               {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -265,7 +263,8 @@ export default function Navbar() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="mt-3 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl p-4"
+            className="bg-white/80 backdrop-blur-xl shadow-xl p-10 rounded-2xl flex flex-col items-center justify-center"
+            style={{marginTop:10}}
             role="menu"
             aria-label="Menu mobile"
           >

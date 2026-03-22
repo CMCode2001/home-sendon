@@ -1,12 +1,11 @@
 import { LanguageProvider } from './contexts/LanguageContext'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import Home from './components/Home'
 import Problem from './components/Problem'
 import Solution from './components/Solution'
 import InteractiveSection from './components/InteractiveSection'
 import AISection from './components/AISection'
 import Awards from './components/Awards'
-// import Technology from './components/Technology'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -14,16 +13,15 @@ export default function App() {
     <LanguageProvider>
       <div className="min-h-screen">
         <Navbar />
-        <main>
-          {/* <Hero /> */}
+        <main className="flex flex-col gap-10 md:gap-10 mb-10">
+          <Home />
           <Problem />
           <Solution />
           <InteractiveSection />
           <AISection />
           <Awards />
-          {/* <Technology /> */}
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </LanguageProvider>
   )

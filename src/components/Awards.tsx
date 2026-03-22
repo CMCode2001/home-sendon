@@ -17,7 +17,7 @@ export default function Awards() {
   ]
 
   return (
-    <section id="awards" ref={ref} className="section bg-white">
+    <section id="awards" ref={ref} className="section py-16 sm:py-24 bg-slate-50">
       <div className="container-xl">
         {/* Header */}
         <motion.div className="section-header" initial="hidden" animate={inView?'show':'hidden'} variants={{ show:{ transition:{ staggerChildren:0.1 } } }}>

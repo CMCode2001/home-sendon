@@ -17,14 +17,9 @@ export default function Solution() {
     { Icon: Smartphone,  color: 'text-emerald-600', bg: 'bg-emerald-50', title: t.solution.feature4, desc: t.solution.feature4Desc },
   ]
 
-  const nodes = [
-    { emoji: '🩸', label: lang === 'fr' ? 'Donneur' : 'Donor' },
-    { emoji: '🏥', label: lang === 'fr' ? 'Hôpital' : 'Hospital' },
-    { emoji: '🧬', label: 'CNTS' },
-  ]
 
   return (
-    <section id="solution" ref={ref} className="section bg-white">
+    <section id="solution" ref={ref} className="section py-16 sm:py-24 bg-slate-50">
       <div className="container-xl">
         {/* Header */}
         <motion.div className="section-header" initial="hidden" animate={inView ? 'show' : 'hidden'} variants={{ show: { transition: { staggerChildren: 0.1 } } }}>

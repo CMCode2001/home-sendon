@@ -18,7 +18,7 @@ export default function Problem() {
   ]
 
   return (
-    <section id="problem" ref={ref} className="bg-slate-50 relative pb-16 sm:pb-24" style={{ paddingTop: '150px' }}>
+    <section id="problem" ref={ref} className="section py-16 sm:py-24 bg-slate-50 relative">
       <div className="container-xl relative z-10">
         {/* Header */}
         <motion.div className="section-header" initial="hidden" animate={inView ? 'show' : 'hidden'} variants={{ show: { transition: { staggerChildren: 0.1 } } }}>

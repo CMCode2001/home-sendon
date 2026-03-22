@@ -16,7 +16,7 @@ export default function AISection() {
   ]
 
   return (
-    <section id="ai" ref={ref} className="section bg-white">
+    <section id="ai" ref={ref} className="section py-16 sm:py-24 bg-slate-50">
       <div className="container-xl flex flex-col items-center">
         
         {/* Text */}

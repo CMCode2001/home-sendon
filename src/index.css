@@ -30,7 +30,7 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  background: #ffffff;
+  background: #fbfbfb;
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,16 +71,7 @@ body {
 
 /* ─── Section spacing ────────────────────────────────── */
 .section {
-  padding-top: 56px;
-  padding-bottom: 56px;
-  scroll-margin-top: 80px;
-}
-
-@media (min-width: 768px) {
-  .section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+  scroll-margin-top: 100px;
 }
 
 /* ─── Section header (centred by default) ────────────── */

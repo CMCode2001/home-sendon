@@ -269,7 +269,7 @@ export default function InteractiveSection() {
   }
 
   return (
-    <section id="product" ref={ref} className="section bg-slate-50">
+    <section id="product" ref={ref} className="section py-16 sm:py-24 bg-slate-50">
       <div className="container-xl">
 
         {/* ── Section header ── */}
