@@ -109,8 +109,8 @@ const translations = {
     },
     awards: {
       badge: 'Distinctions & Reconnaissances',
-      title: 'Reconnus par les leaders mondiaux de la HealthTech',
-      subtitle: 'Notre vision a été validée par les plus grandes organisations d\'innovation en santé mondiale.',
+      title: 'Reconnu par des institutions et à l’échelle nationale.',
+      subtitle: 'Notre vision est validée par des institutions de référence et des programmes d’innovation, à l’échelle nationale.',
       award1Name: '2ème Prix d\'Excellence Nationale',
       award1Org: 'Gov\'athon 2025',
       award1Year: '2025',
@@ -270,8 +270,8 @@ const translations = {
     },
     awards: {
       badge: 'Awards & Recognition',
-      title: 'Recognized by global HealthTech leaders',
-      subtitle: 'Our vision has been validated by the greatest global health innovation organizations.',
+      title: 'Recognized by leading institutions and at the national level.',
+      subtitle: 'Our vision is endorsed by leading institutions and innovation programs at the national level.',
       award1Name: '2nd Prize of Excellence',
       award1Org: 'Gov\'athon 2025',
       award1Year: '2025',
